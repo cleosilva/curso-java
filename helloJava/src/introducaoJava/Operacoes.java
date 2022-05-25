@@ -1,4 +1,4 @@
-package cursoJava;
+package introducaoJava;
 
 public class Operacoes {
 	
