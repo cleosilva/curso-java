@@ -14,6 +14,9 @@
     <li>While e Do While</li>
     <li>For</li>
   </ul>
+  <li>Introdução a orientação a objetos</li>
+  <li>Herança, Polimorfismo e Interface</li>
+  <li>Tratamento de erros e exeções em Java</li>
   </ul>
   
   <p> 🚧 Em construção... 🚧</p>
