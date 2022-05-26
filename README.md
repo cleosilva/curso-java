@@ -7,8 +7,7 @@
   <li><a href="https://github.com/cleosilva/curso-java/blob/master/helloJava/src/introducaoJava/Operacoes.java">Tipo de variáveis e operação com números</a></li>
   <li>Condicionais</li>
   <ul>
-    <li><a href="https://github.com/cleosilva/curso-java/blob/master/helloJava/src/introducaoJava/Condicionais.java">IF/ELSE</a></li>
-    <li><a href="https://github.com/cleosilva/curso-java/blob/master/helloJava/src/introducaoJava/Condicionais.java">Ternário</a></li>
+    <li><a href="https://github.com/cleosilva/curso-java/blob/master/helloJava/src/introducaoJava/Condicionais.java">IF/ELSE e ternário</a></li>
     <li><a href="https://github.com/cleosilva/curso-java/blob/master/helloJava/src/introducaoJava/SwitchCase.java">Switch</a></li>
     <li><a href="https://github.com/cleosilva/curso-java/blob/master/helloJava/src/introducaoJava/OperadoresRelacionais.java">Relacionais</a></li>
     <li><a href="https://github.com/cleosilva/curso-java/blob/master/helloJava/src/introducaoJava/EstruturaWhile.java">While e Do While</a></li>
