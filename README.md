@@ -3,7 +3,7 @@
 <h3>Repositório criado para consulta da linguagem Java</h3>
 
 <ul>
-  <li>Escopo de variáveis</li>
+  <li><a href="https://github.com/cleosilva/curso-java/blob/master/helloJava/src/introducaoJava/Variavel.java">Escopo de variáveis</a></li>
   <li>Tipo de variáveis e operação com números</li>
   <li>Condicionais</li>
   <ul>
