@@ -18,6 +18,9 @@
   <li><a href="https://github.com/cleosilva/curso-java/blob/master/helloJava/src/introducaoJava/EntradaDados.java">Entrada de dados do usuário</a></li>
   <li><a href="https://github.com/cleosilva/curso-java/blob/master/helloJava/src/introducaoJava/CalculoMedia.java">Calculando a média com entrada de usuário</a></li>
   <li>Introdução a orientação a objetos</li>
+  <ul>
+    <li><a href="https://github.com/cleosilva/curso-java/blob/master/helloJava/src/orientacaoObjetos/Aluno.java">Criando a Classe Aluno e os métodos getters e setters</a></li>
+  </ul>
   <li>Herança, Polimorfismo e Interface</li>
   <li>Tratamento de erros e exeções em Java</li>
   </ul>
