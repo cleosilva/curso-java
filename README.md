@@ -1,6 +1,6 @@
-<h1 align = "center">Fundamentos do Java</h1>
+<h1 align = "center">Curso Java</h1>
   
-<h3>Repositório criado para consulta dos fundamentos em Java</h3>
+<h3>Repositório criado para consulta da linguagem Java</h3>
 
 <ul>
   <li>Escopo de variáveis</li>
