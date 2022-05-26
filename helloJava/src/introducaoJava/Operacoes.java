@@ -3,6 +3,8 @@ package introducaoJava;
 public class Operacoes {
 	
 	public static void main(String[] args) {
+		// Tipos de variáveis
+		
 		// Variáveis Primitivas
 		int idade = 18; // armazena um número inteiro
 	    float cotacaoDolar = 5.0f; // armazena números com decimais
