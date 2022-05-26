@@ -1,6 +1,6 @@
-<h1 align = "center">Curso Java</h1>
-  
-<h3>Repositório criado para consulta da linguagem Java</h3>
+<h1 align = "center" ><img src="https://user-images.githubusercontent.com/82469705/170516667-409b841e-775c-4e2f-8507-01e922b85662.png" align="center"></img>Curso Java</h1> 
+
+<h3>Guia para aprendizado da linguagem Java</h3>
 
 <ul>
   <li><a href="https://github.com/cleosilva/curso-java/blob/master/helloJava/src/introducaoJava/Variavel.java">Escopo de variáveis</a></li>
