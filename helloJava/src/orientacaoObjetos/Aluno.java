@@ -1,5 +1,7 @@
 package orientacaoObjetos;
 
+import java.util.Objects;
+
 public class Aluno {
 	
 		// Esses são os atributos do aluno
@@ -13,12 +15,17 @@ public class Aluno {
 		private String dataMatricula;
 		private String nomeEscola;
 		private String serieMatriculado;
+		private double nota1;
+		private double nota2;
+		private double nota3;
+		private double nota4;
 		
 		/* Inserindo métodos getters e setters
 		 * SET é adicionar ou receber dados para os atributos
 		 * GET é para resgatar ou obter o valor do atributo 
 		*/ 
 		
+		// void significa que o método não vai retornar apenas receber
 		public void setNome(String nome) {
 			/* this.nome faz referência ao atributo da classe,
 			 nome faz referência ao parâmetro do método que será recebido */
@@ -100,6 +107,79 @@ public class Aluno {
 
 		public void setSerieMatriculado(String serieMatriculado) {
 			this.serieMatriculado = serieMatriculado;
+		}
+
+		public double getNota1() {
+			return nota1;
+		}
+
+		public void setNota1(double nota1) {
+			this.nota1 = nota1;
+		}
+
+		public double getNota2() {
+			return nota2;
+		}
+
+		public void setNota2(double nota2) {
+			this.nota2 = nota2;
+		}
+
+		public double getNota3() {
+			return nota3;
+		}
+
+		public void setNota3(double nota3) {
+			this.nota3 = nota3;
+		}
+
+		public double getNota4() {
+			return nota4;
+		}
+
+		public void setNota4(double nota4) {
+			this.nota4 = nota4;
+		}
+		
+		// Método para retorna a média do aluno
+		public double getMediaNota() {
+			return (nota1 + nota2 + nota3 + nota4) / 4;
+		}
+		
+		public boolean getAlunoAprovado() {
+			double media = this.getMediaNota();
+			if (media >= 70) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+
+		@Override
+		public String toString() {
+			return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento
+					+ ", registroGeral=" + registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae
+					+ ", nomePai=" + nomePai + ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola
+					+ ", serieMatriculado=" + serieMatriculado + ", nota1=" + nota1 + ", nota2=" + nota2 + ", nota3="
+					+ nota3 + ", nota4=" + nota4 + "]";
+		}
+		
+		// Utilizando o método hashCode para identificar CPF's iguais
+		@Override
+		public int hashCode() {
+			return Objects.hash(numeroCpf);
+		}
+
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			Aluno other = (Aluno) obj;
+			return Objects.equals(numeroCpf, other.numeroCpf);
 		}
 		
 }
