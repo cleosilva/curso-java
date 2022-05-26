@@ -10,12 +10,20 @@ public class EntradaDados {
 		int carrosNumero = Integer.parseInt(carros);
 		int pessoasNumero = Integer.parseInt(pessoas);
 		
-		
 		int divisao = (carrosNumero / pessoasNumero);
 		
 		int resto = carrosNumero % pessoasNumero;
 		
-		JOptionPane.showInternalMessageDialog(null, "A divisão de carros por pessoa deu: " + divisao + " carro(s)" 
-				+ " e sobrou: " + resto + " carro(s)" );
+		int resposta = JOptionPane.showConfirmDialog( null,"Deseja ver o resultado da divisão?");
+		
+		if (resposta == 0) {
+			JOptionPane.showMessageDialog(null, "A divisão de carros por pessoa deu: " + divisao);
+		}
+		
+		resposta = JOptionPane.showConfirmDialog(null, "Deseja ver o RESTO da divisão?");
+		
+		if (resposta == 0) {
+			JOptionPane.showMessageDialog(null, " o resto da divisão é: " + resto);
+		}
 	}
 }
