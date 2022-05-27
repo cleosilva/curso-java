@@ -3,6 +3,7 @@ package orientacaoObjetos.executavel;
 import javax.swing.JOptionPane;
 
 import orientacaoObjetos.Aluno;
+import orientacaoObjetos.Disciplina;
 
 public class App {
 	public static void main(String[] args) {
@@ -17,9 +18,13 @@ public class App {
 		String matricula = JOptionPane.showInputDialog("Informe a matricula do aluno: ");
 		String serie = JOptionPane.showInputDialog("Informe a série do aluno: ");
 		String escola = JOptionPane.showInputDialog("Informe a escola do aluno: ");
+		String disciplina1 = JOptionPane.showInputDialog("Informe a disciplina 1:");
 		String nota1 = JOptionPane.showInputDialog("Informe a primeira nota do aluno: ");
+		String disciplina2 = JOptionPane.showInputDialog("Informe a disciplina 2:");
 		String nota2 = JOptionPane.showInputDialog("Informe a segunda nota do aluno: ");
+		String disciplina3 = JOptionPane.showInputDialog("Informe a disciplina 3:");
 		String nota3 = JOptionPane.showInputDialog("Informe a terceira nota do aluno: ");
+		String disciplina4 = JOptionPane.showInputDialog("Informe a disciplina 4:");
 		String nota4 = JOptionPane.showInputDialog("Informe a quarta nota do aluno: ");
 		
 		
@@ -38,10 +43,15 @@ public class App {
 		aluno1.setSerieMatriculado(serie);
 		aluno1.setNomeEscola(escola);
 		// Double.parseDouble retorna um floatingDecimal
-		aluno1.setNota1(Double.parseDouble(nota1));
-		aluno1.setNota2(Double.parseDouble(nota2));
-		aluno1.setNota3(Double.parseDouble(nota3));
-		aluno1.setNota4(Double.parseDouble(nota4));
+		aluno1.getDisciplina().setNota1(Double.parseDouble(nota1));
+		aluno1.getDisciplina().setNota2(Double.parseDouble(nota2));
+		aluno1.getDisciplina().setNota3(Double.parseDouble(nota3));
+		aluno1.getDisciplina().setNota4(Double.parseDouble(nota4));
+		
+		aluno1.getDisciplina().setDisciplina1(disciplina1);
+		aluno1.getDisciplina().setDisciplina2(disciplina2);
+		aluno1.getDisciplina().setDisciplina3(disciplina3);
+		aluno1.getDisciplina().setDisciplina4(disciplina4);
 		
 		/*
 		 * O método toString é um método da classe de objeto 
