@@ -6,16 +6,10 @@ import java.util.Objects;
 
 import cursoJava.constantes.StatusAluno;
 
-public class Aluno {
+public class Aluno extends Pessoa {
 	
 		// Esses são os atributos do aluno
-		private String nome;
-		private int idade;
-		private String dataNascimento;
-		private String registroGeral;
-		private String numeroCpf;
-		private String nomeMae;
-		private String nomePai;
+		
 		private String dataMatricula;
 		private String nomeEscola;
 		private String serieMatriculado;
@@ -145,7 +139,7 @@ public class Aluno {
 		}
 
 		
-		@Override
+		@Override // identifica um método sobrescrito
 		public String toString() {
 			return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento
 					+ ", registroGeral=" + registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae
