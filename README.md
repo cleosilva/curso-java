@@ -23,6 +23,9 @@
     <li><a href="https://github.com/cleosilva/curso-java/blob/master/helloJava/src/orientacaoObjetos/Disciplina.java">Relacionamento entre Classes</a></li>
   </ul>
   <li>Herança, Polimorfismo e Interface</li>
+  <ul>
+    <li><a href="https://github.com/cleosilva/curso-java/blob/master/helloJava/src/orientacaoObjetos/Diretor.java">Herança</a></li>
+  </ul>
   <li>Tratamento de erros e exeções em Java</li>
   </ul>
   
