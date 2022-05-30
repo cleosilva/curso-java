@@ -1,5 +1,7 @@
 package orientacaoObjetos;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Aluno {
@@ -16,15 +18,15 @@ public class Aluno {
 		private String nomeEscola;
 		private String serieMatriculado;
 		
+		// dentro do operador diamante <> coloca o nome da classe
+		private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
 		
-		private Disciplina disciplina = new Disciplina();
-		
-		public void setDisciplina(Disciplina disciplina) {
-			this.disciplina = disciplina;
+		public void setDisciplina(List<Disciplina> disciplinas) {
+			this.disciplinas = disciplinas;
 		}
 		
-		public Disciplina getDisciplina() {
-			return disciplina;
+		public List<Disciplina> getDisciplinas(){
+			return disciplinas;
 		}
 		
 		/* Inserindo métodos getters e setters
@@ -118,16 +120,25 @@ public class Aluno {
 
 		// Método para retorna a média do aluno
 		public double getMediaNota() {
-			return (disciplina.getNota1() + disciplina.getNota2() 
-			+ disciplina.getNota3() + disciplina.getNota4()) / 4;
+			double somaNotas = 0.0;
+			
+			for (Disciplina disciplina: disciplinas) {
+				somaNotas += disciplina.getNota();
+			}
+			
+			return somaNotas / disciplinas.size();
 		}
 		
-		public boolean getAlunoAprovado() {
+		public String getAlunoAprovado() {
 			double media = this.getMediaNota();
-			if (media >= 70) {
-				return true;
+			if (media >= 50) {
+				if (media >= 70) {					
+					return "Aluno aprovado";
+				} else {
+					return "Aluno em recuperação";
+				}
 			} else {
-				return false;
+				return "Aluno reprovado";
 			}
 		}
 
@@ -137,7 +148,7 @@ public class Aluno {
 			return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento
 					+ ", registroGeral=" + registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae
 					+ ", nomePai=" + nomePai + ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola
-					+ ", serieMatriculado=" + serieMatriculado + ", disciplina=" + disciplina + "]";
+					+ ", serieMatriculado=" + serieMatriculado + " ]";
 		}
 
 		// Utilizando o método hashCode para identificar CPF's iguais

@@ -1,5 +1,8 @@
 package orientacaoObjetos.executavel;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.swing.JOptionPane;
 
 import orientacaoObjetos.Aluno;
@@ -8,8 +11,13 @@ import orientacaoObjetos.Disciplina;
 public class App {
 	public static void main(String[] args) {
 		
-		String nome = JOptionPane.showInputDialog("Informe o nome do aluno: ");
-		String idade = JOptionPane.showInputDialog("Informe a idade do aluno: ");
+		List<Aluno> alunos = new ArrayList<Aluno>();
+		
+		for (int qtd = 1; qtd <= 2; qtd++) {
+			
+		
+		String nome = JOptionPane.showInputDialog("Informe o nome do aluno" +qtd+"?");
+		/*String idade = JOptionPane.showInputDialog("Informe a idade do aluno: ");
 		String nascimento = JOptionPane.showInputDialog("Data de nascimento do aluno: ");
 		String rg = JOptionPane.showInputDialog("Informe o RG do aluno: ");
 		String cpf = JOptionPane.showInputDialog("Informe o CPF do aluno: ");
@@ -17,15 +25,7 @@ public class App {
 		String pai = JOptionPane.showInputDialog("Informe o nome do Pai do aluno: ");
 		String matricula = JOptionPane.showInputDialog("Informe a matricula do aluno: ");
 		String serie = JOptionPane.showInputDialog("Informe a série do aluno: ");
-		String escola = JOptionPane.showInputDialog("Informe a escola do aluno: ");
-		String disciplina1 = JOptionPane.showInputDialog("Informe a disciplina 1:");
-		String nota1 = JOptionPane.showInputDialog("Informe a primeira nota do aluno: ");
-		String disciplina2 = JOptionPane.showInputDialog("Informe a disciplina 2:");
-		String nota2 = JOptionPane.showInputDialog("Informe a segunda nota do aluno: ");
-		String disciplina3 = JOptionPane.showInputDialog("Informe a disciplina 3:");
-		String nota3 = JOptionPane.showInputDialog("Informe a terceira nota do aluno: ");
-		String disciplina4 = JOptionPane.showInputDialog("Informe a disciplina 4:");
-		String nota4 = JOptionPane.showInputDialog("Informe a quarta nota do aluno: ");
+		String escola = JOptionPane.showInputDialog("Informe a escola do aluno: ");*/
 		
 		
 		// new Aluno() é uma instância(criação) de objeto;
@@ -33,7 +33,7 @@ public class App {
 		Aluno aluno1 = new Aluno();
 		aluno1.setNome(nome);
 		// Integer.valueOf retorna um inteiro
-		aluno1.setIdade(Integer.valueOf(idade));
+		/*aluno1.setIdade(Integer.valueOf(idade));
 		aluno1.setDataNascimento(nascimento);
 		aluno1.setRegistroGeral(rg);
 		aluno1.setNumeroCpf(cpf);
@@ -41,27 +41,67 @@ public class App {
 		aluno1.setNomePai(pai);
 		aluno1.setDataMatricula(matricula);
 		aluno1.setSerieMatriculado(serie);
-		aluno1.setNomeEscola(escola);
-		// Double.parseDouble retorna um floatingDecimal
-		aluno1.getDisciplina().setNota1(Double.parseDouble(nota1));
-		aluno1.getDisciplina().setNota2(Double.parseDouble(nota2));
-		aluno1.getDisciplina().setNota3(Double.parseDouble(nota3));
-		aluno1.getDisciplina().setNota4(Double.parseDouble(nota4));
+		aluno1.setNomeEscola(escola);*/
 		
-		aluno1.getDisciplina().setDisciplina1(disciplina1);
-		aluno1.getDisciplina().setDisciplina2(disciplina2);
-		aluno1.getDisciplina().setDisciplina3(disciplina3);
-		aluno1.getDisciplina().setDisciplina4(disciplina4);
+		
+		for (int pos = 1; pos <= 1; pos++) {
+			String nomeDisciplina = JOptionPane.showInputDialog("Nome da disciplina" + pos +":");
+			String notaDisciplina = JOptionPane.showInputDialog("Nota da disciplina" + pos + ":");
+			
+			Disciplina disciplina = new Disciplina();
+			disciplina.setDisciplina(nomeDisciplina);
+			disciplina.setNota(Double.valueOf(notaDisciplina));
+			
+			aluno1.getDisciplinas().add(disciplina);
+			
+		}
+		
+		int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina?");
+		
+		if (escolha == 0) { // Opção SIM tem retorno zero
+			
+			int continuarRemover = 0;
+			int posicao = 1;
+			
+			while (continuarRemover == 0) {				
+				String removerDisciplina = JOptionPane.showInputDialog("Qual disciplina 1, 2, 3 ou 4?");
+				aluno1.getDisciplinas().remove(Integer.valueOf(removerDisciplina).intValue() - posicao);
+				continuarRemover = JOptionPane.showConfirmDialog(null, "Deseja continuar a remover?");
+			}
+		}
+		
 		
 		/*
 		 * O método toString é um método da classe de objeto 
 		 * em java e é herdado por todas as classes em java por padrão. 
 		 * Ele fornece a representação de string de qualquer objeto em java.
 		 */
-		System.out.println(aluno1.toString());
-		
-		System.out.println("Data nascimento: " + aluno1.getDataNascimento());
-		System.out.println("Média da nota é: " + aluno1.getMediaNota());
-		System.out.println("Resultado: " + (aluno1.getAlunoAprovado()? "Aprovado": "Reprovado"));
+	
+		alunos.add(aluno1);	
+	}
+	
+		for (int pos = 0; pos < alunos.size(); pos++) {
+			Aluno aluno = alunos.get(pos);
+			
+			if (aluno.getNome().equalsIgnoreCase("alex")) {
+				
+				Aluno trocar = new Aluno();
+				trocar.setNome("Aluno foi trocado");
+				
+				Disciplina disciplina = new Disciplina();
+				disciplina.setDisciplina("matemática");
+				disciplina.setNota(96);
+				
+				trocar.getDisciplinas().add(disciplina);
+				
+				alunos.set(pos, trocar);
+				aluno = alunos.get(pos);
+			}
+			
+			System.out.println("Aluno: " + aluno.getNome());
+			System.out.println("Média: " + aluno.getMediaNota());
+			System.out.println("Resultado: " + aluno.getAlunoAprovado());
+			System.out.println("------------------------------------------------------");
+		}
 	}
 }
