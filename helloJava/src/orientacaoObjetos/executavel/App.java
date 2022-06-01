@@ -14,6 +14,8 @@ import orientacaoObjetos.Secretario;
 
 public class App {
 	public static void main(String[] args) {
+	
+		try {
 		
 		String login = JOptionPane.showInputDialog("Informe o login");
 		String senha = JOptionPane.showInputDialog("Informe a senha");
@@ -130,5 +132,11 @@ public class App {
 		} else {
 			JOptionPane.showMessageDialog(null, "Acesso não permitido.");
 		}
+		}catch(Exception e) {
+			e.printStackTrace(); /*Imprimi error no console*/
+			JOptionPane.showMessageDialog(null, "Erro ao processar notas");
+		}
+		
 	}
+	
 }
