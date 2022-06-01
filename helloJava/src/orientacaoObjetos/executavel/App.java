@@ -7,8 +7,10 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 import cursoJava.constantes.StatusAluno;
+import cursoJava.interfaces.PermitirAcesso;
 import orientacaoObjetos.Aluno;
 import orientacaoObjetos.Disciplina;
+import orientacaoObjetos.Secretario;
 
 public class App {
 	public static void main(String[] args) {
@@ -16,7 +18,10 @@ public class App {
 		String login = JOptionPane.showInputDialog("Informe o login");
 		String senha = JOptionPane.showInputDialog("Informe a senha");
 		
-		if (login.equalsIgnoreCase("admin") && senha.equalsIgnoreCase("admin")) {
+		PermitirAcesso secretario = new Secretario();
+		
+		
+		if (secretario.autenticar(login, senha)) { /* Se true acessa o sistema*/
 			
 		
 		List<Aluno> alunos = new ArrayList<Aluno>();
@@ -28,7 +33,7 @@ public class App {
 		List<Aluno> alunosRecuperacao = new ArrayList<Aluno>();
 		List<Aluno> alunosReprovados = new ArrayList<Aluno>();
 		
-		for (int qtd = 1; qtd <= 5; qtd++) {
+		for (int qtd = 1; qtd <= 2; qtd++) {
 			
 		String nome = JOptionPane.showInputDialog("Informe o nome do aluno" +qtd+"?");
 		/*String idade = JOptionPane.showInputDialog("Informe a idade do aluno: ");
@@ -122,6 +127,8 @@ public class App {
 		for (Aluno aluno : maps.get(StatusAluno.REPROVADO)) {
 			System.out.println("Nome: " + aluno.getNome() + " - Resultado: " + aluno.getAlunoAprovado() + " com média de: " + aluno.getMediaNota());
 		}
+		} else {
+			JOptionPane.showMessageDialog(null, "Acesso não permitido.");
 		}
 	}
 }

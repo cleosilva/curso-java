@@ -164,6 +164,12 @@ public class Aluno extends Pessoa {
 			Aluno other = (Aluno) obj;
 			return Objects.equals(numeroCpf, other.numeroCpf);
 		}
+
+		@Override
+		public double salario() {
+			// TODO Auto-generated method stub
+			return 1500.00;
+		}
 		
 }
 

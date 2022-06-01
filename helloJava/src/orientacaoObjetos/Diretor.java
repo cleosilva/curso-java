@@ -1,5 +1,6 @@
 package orientacaoObjetos;
 
+/* A classe Diretor herda atributos da classe Pessoa */
 public class Diretor extends Pessoa{
 	private String registroEducacao;
 	private int tempoDirecao;
@@ -23,6 +24,11 @@ public class Diretor extends Pessoa{
 	}
 	public void setTitulacao(String titulacao) {
 		this.titulacao = titulacao;
+	}
+	@Override
+	public double salario() {
+		// TODO Auto-generated method stub
+		return 6500.70;
 	}
 	
 	

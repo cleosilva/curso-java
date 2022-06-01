@@ -17,8 +17,12 @@ public class TestandoClassesFilhas {
 		diretor.setNome("Ana Luisa");
 		
 		System.out.println("Nome do aluno: " + aluno.getNome());
+		System.out.println("Salário: " + aluno.salario());
 		System.out.println("Nome do secretário: " + secretario.getNome());
+		System.out.println("Salário: " + secretario.salario());
 		System.out.println("Nome do Diretor: " + diretor.getNome());
+		System.out.println("Salário; " + diretor.salario());
+		
 		
 	}
 }

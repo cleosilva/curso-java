@@ -12,6 +12,10 @@ public abstract class Pessoa {
 	protected String nomeMae;
 	protected String nomePai;
 	
+	/*Método abstract na classe mãe é obrigatório para as classes filhas*/
+	public abstract double salario();
+	
+	
 	public String getNome() {
 		return nome;
 	}
