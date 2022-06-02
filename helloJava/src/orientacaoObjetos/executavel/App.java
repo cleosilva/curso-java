@@ -7,13 +7,14 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 import cursoJava.constantes.StatusAluno;
+import cursoJava.excecao.ExcecaoProcessarNota;
 import cursoJava.interfaces.PermitirAcesso;
 import orientacaoObjetos.Aluno;
 import orientacaoObjetos.Disciplina;
 import orientacaoObjetos.Secretario;
 
 public class App {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ExcecaoProcessarNota {
 	
 		try {
 		
@@ -71,7 +72,7 @@ public class App {
 			
 			Disciplina disciplina = new Disciplina();
 			disciplina.setDisciplina(nomeDisciplina);
-			disciplina.setNota(Double.valueOf(notaDisciplina));
+			//disciplina.setNota(Double.valueOf(notaDisciplina));
 			
 			aluno1.getDisciplinas().add(disciplina);
 			
@@ -133,8 +134,10 @@ public class App {
 			JOptionPane.showMessageDialog(null, "Acesso não permitido.");
 		}
 		}catch(Exception e) {
-			e.printStackTrace(); /*Imprimi error no console*/
-			JOptionPane.showMessageDialog(null, "Erro ao processar notas");
+			//e.printStackTrace(); /*Imprimi error no console*/
+			throw new ExcecaoProcessarNota(e.getMessage()); 
+		}finally { /* sempre é executado ocorrendo erro ou não */
+			JOptionPane.showMessageDialog(null, "Sistema encerrado!");
 		}
 		
 	}

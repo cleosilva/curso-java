@@ -1,5 +1,6 @@
 package orientacaoObjetos;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 /* Relacionamento entre Classes é quando uma classe uma classe depende de outra, 
@@ -8,14 +9,16 @@ import java.util.Objects;
 
 // Esta classe de Disciplina servirá para todos os objetos e instâncias de notas e disciplinas
 public class Disciplina {
-	private double nota;
+	/* Cada disciplina terá 4 notas no ano letivo */
+	private double[] nota = new double[4] ;
 	private String disciplina;
 
-	public double getNota() {
+	
+	public double[] getNota() {
 		return nota;
 	}
 
-	public void setNota(double nota) {
+	public void setNota(double[] nota) {
 		this.nota = nota;
 	}
 
@@ -26,10 +29,24 @@ public class Disciplina {
 	public void setDisciplina(String disciplina) {
 		this.disciplina = disciplina;
 	}
+	
+	public double getMediaNotas() {
+		double somaTotal = 0;
+		
+		for (int i = 0; i < nota.length; i++) {
+			somaTotal += nota[i];
+		}
+		
+		return somaTotal / 4;
+	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(disciplina, nota);
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + Arrays.hashCode(nota);
+		result = prime * result + Objects.hash(disciplina);
+		return result;
 	}
 
 	@Override
@@ -41,8 +58,7 @@ public class Disciplina {
 		if (getClass() != obj.getClass())
 			return false;
 		Disciplina other = (Disciplina) obj;
-		return Objects.equals(disciplina, other.disciplina)
-				&& Double.doubleToLongBits(nota) == Double.doubleToLongBits(other.nota);
+		return Objects.equals(disciplina, other.disciplina) && Arrays.equals(nota, other.nota);
 	}
 
 	@Override
