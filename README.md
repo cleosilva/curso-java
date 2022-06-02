@@ -28,6 +28,9 @@
   </ul>
   <li>Tratamento de erros e exeções em Java</li>
   <li><a href="https://github.com/cleosilva/curso-java/blob/master/helloJava/src/orientacaoObjetos/executavel/Arrays.java">Manipulação de vetores</a></li>
+  <ul>
+    <li><a href="https://github.com/cleosilva/curso-java/blob/master/helloJava/src/orientacaoObjetos/executavel/Matriz.java">Matriz - Array Bidimensional</a></li>
+  </ul>
   </ul>
   
   <p> 🚧 Em construção... 🚧</p>
