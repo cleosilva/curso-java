@@ -31,8 +31,8 @@
   <ul>
     <li><a href="https://github.com/cleosilva/curso-java/blob/master/helloJava/src/cursoJava/executavel/Matriz.java">Matriz - Array Bidimensional</a></li>
     <li><a href="https://github.com/cleosilva/curso-java/blob/master/helloJava/src/cursoJava/executavel/SplitArray.java">Método split para Array</a></li>
-    <li><a href="https://github.com/cleosilva/curso-java/blob/master/helloJava/src/cursoJava/thread/AulaThread.java">Trabalhando com Thread - Programação Concorrente</a>>/li>
   </ul>
+  <li><a href="https://github.com/cleosilva/curso-java/blob/master/helloJava/src/cursoJava/thread/AulaThread.java">Trabalhando com Thread - Programação Concorrente</a></li>
   </ul>
   
     
