@@ -1,4 +1,4 @@
-package orientacaoObjetos.executavel;
+package cursoJava.executavel;
 
 public class Matriz {
 	public static void main(String[] args) {

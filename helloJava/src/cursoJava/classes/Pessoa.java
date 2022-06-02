@@ -1,4 +1,4 @@
-package orientacaoObjetos;
+package cursoJava.classes;
 
 /* superclasse
  * a palavra chave abstract impede que a classe seja instanciada.

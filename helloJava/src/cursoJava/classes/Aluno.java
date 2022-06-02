@@ -1,4 +1,4 @@
-package orientacaoObjetos;
+package cursoJava.classes;
 
 import java.util.ArrayList;
 import java.util.List;

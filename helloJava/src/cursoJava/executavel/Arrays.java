@@ -1,9 +1,9 @@
-package orientacaoObjetos.executavel;
+package cursoJava.executavel;
 
 import javax.swing.JOptionPane;
 
-import orientacaoObjetos.Aluno;
-import orientacaoObjetos.Disciplina;
+import cursoJava.classes.Aluno;
+import cursoJava.classes.Disciplina;
 
 public class Arrays {
 	public static void main(String[] args) {

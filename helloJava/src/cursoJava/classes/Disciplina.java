@@ -1,4 +1,4 @@
-package orientacaoObjetos;
+package cursoJava.classes;
 
 import java.util.Arrays;
 import java.util.Objects;

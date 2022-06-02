@@ -1,8 +1,8 @@
-package orientacaoObjetos.executavel;
+package cursoJava.executavel;
 
-import orientacaoObjetos.Aluno;
-import orientacaoObjetos.Diretor;
-import orientacaoObjetos.Secretario;
+import cursoJava.classes.Aluno;
+import cursoJava.classes.Diretor;
+import cursoJava.classes.Secretario;
 
 public class TestandoClassesFilhas {
 	public static void main(String[] args) {

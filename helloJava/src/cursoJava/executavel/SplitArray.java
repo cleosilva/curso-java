@@ -1,4 +1,4 @@
-package orientacaoObjetos.executavel;
+package cursoJava.executavel;
 
 import java.util.Arrays;
 import java.util.List;

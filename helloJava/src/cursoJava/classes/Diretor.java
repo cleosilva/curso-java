@@ -1,4 +1,4 @@
-package orientacaoObjetos;
+package cursoJava.classes;
 
 /* A classe Diretor herda atributos da classe Pessoa */
 public class Diretor extends Pessoa{

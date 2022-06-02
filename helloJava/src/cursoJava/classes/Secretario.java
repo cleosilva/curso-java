@@ -1,4 +1,4 @@
-package orientacaoObjetos;
+package cursoJava.classes;
 
 import cursoJava.interfaces.PermitirAcesso;
 

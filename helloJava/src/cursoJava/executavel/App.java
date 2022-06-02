@@ -1,4 +1,4 @@
-package orientacaoObjetos.executavel;
+package cursoJava.executavel;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -6,12 +6,12 @@ import java.util.List;
 
 import javax.swing.JOptionPane;
 
+import cursoJava.classes.Aluno;
+import cursoJava.classes.Disciplina;
+import cursoJava.classes.Secretario;
 import cursoJava.constantes.StatusAluno;
 import cursoJava.excecao.ExcecaoProcessarNota;
 import cursoJava.interfaces.PermitirAcesso;
-import orientacaoObjetos.Aluno;
-import orientacaoObjetos.Disciplina;
-import orientacaoObjetos.Secretario;
 
 public class App {
 	public static void main(String[] args) throws ExcecaoProcessarNota {
