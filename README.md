@@ -41,6 +41,10 @@
     <li><a href="https://github.com/cleosilva/curso-java/blob/master/helloJava/src/cursoJava/datas/CalculoDatas.java">Adiconando dias, mês e ano em datas</a></li>
     <li><a href="https://github.com/cleosilva/curso-java/blob/master/helloJava/src/cursoJava/datas/DataNovaApiJava.java">Nova API de data Java8</a></li>
   </ul>
+  <li>Leitura e escrita TXT e Excel com Apache POI e JSON com GSON</li>
+  <ul>
+    <li><a>Escrevendo em um arquivo TXT</a><li>
+  </ul>
   </ul>
   
     
