@@ -1,0 +1,5 @@
+Mariana;30;pessoa1@email.com
+Lucas;42;pessoa2@email.com
+Luana;25;pessoa3@email.com
+
+Marcos;13;pessoa4@email.com
