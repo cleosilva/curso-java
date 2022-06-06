@@ -6,5 +6,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-5.2.2.jar"/>
+	<classpathentry kind="lib" path="lib/gson-2.9.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
