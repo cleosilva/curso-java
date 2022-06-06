@@ -40,6 +40,5 @@ public class LerArquivoTxt {
 			System.out.println(pessoa);
 		}
 		
-		
 	}
 }

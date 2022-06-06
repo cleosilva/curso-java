@@ -32,6 +32,11 @@ public class Usuario implements Serializable{
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+	@Override
+	public String toString() {
+		return "Usuario [nome=" + nome + ", cpf=" + cpf + ", login=" + login + ", senha=" + senha + "]";
+	}
+	
 	
 	
 }
