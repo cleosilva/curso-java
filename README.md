@@ -45,6 +45,7 @@
   <ul>
     <li><a href="https://github.com/cleosilva/curso-java/blob/master/helloJava/src/cursoJava/arquivos/arquivos.java">Escrevendo em um arquivo txt</a></li>
     <li><a href="https://github.com/cleosilva/curso-java/blob/master/helloJava/src/cursoJava/arquivos/LerArquivoTxt.java">Lendo um arquivo txt</a></li>
+    <li><a href="https://github.com/cleosilva/curso-java/blob/master/helloJava/src/cursoJava/arquivos/EscreveJSON.java">Escrevendo arquivo JSON</a></li>
   </ul>
   </ul>
   
